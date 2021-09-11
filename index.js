@@ -13,7 +13,7 @@ function loadApp() {
   app.use(express.json());
   app.use("/", roomRouter);
 
-  app.listen(3002, () => console.log(`Server listening at port 3001...`));
+  app.listen(process.env.PORT || 3002, () => console.log(`Server listening at port 3001...`));
 }
 
 loadApp();
